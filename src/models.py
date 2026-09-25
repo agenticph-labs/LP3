@@ -43,6 +43,7 @@ class EvaluationCriterion(BaseModel):
 
 class Deadline(BaseModel):
     """A key date extracted from the document."""
+    model_config = {"populate_by_name": True}
     label: str = Field(description="What this date is for")
     date_value: str = Field(alias="date", description="Date string as it appears")
 
