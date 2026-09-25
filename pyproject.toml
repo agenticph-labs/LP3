@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "rfp-analyzer"
+version = "0.1.0"
+description = "RFP/RFQ Analyzer — structured extraction from procurement documents"
+requires-python = ">=3.11"
+dependencies = [
+    "pymupdf>=1.24",
+    "streamlit>=1.35",
+    "openai>=1.40",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+rfp-analyzer = "src.app:main"
