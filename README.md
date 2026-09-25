@@ -1,5 +1,8 @@
 # 📄 RFP / RFQ Analyzer
 
+[![Status: Live](https://img.shields.io/badge/status-live-22c55e.svg)](https://github.com/agenticph-labs/p3-rfp-analyzer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A Python-based system that extracts structured information from procurement documents (RFPs, RFQs, tenders). Upload a PDF → AI extracts deadlines, eligibility criteria, deliverables, evaluation criteria, and risks — all as structured, validated data.
 
 > **Portfolio Project 3** — Focused on demonstrating clean architecture, not a polished SaaS product.
@@ -136,3 +139,7 @@ The design deliberately separates parsing, prompting, and validation so any laye
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+*Portfolio Project 3 — [AgenticPH Labs](https://agenticph-labs.github.io/portfolio)*
