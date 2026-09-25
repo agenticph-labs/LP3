@@ -5,7 +5,7 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
-import fitz  # PyMuPDF
+import pymupdf  # PyMuPDF
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +16,7 @@ def extract_text(pdf_path: str | Path) -> tuple[str, int]:
     if not path.exists():
         raise FileNotFoundError(f"PDF not found: {path}")
 
-    doc = fitz.open(str(path))
+    doc = pymupdf.open(str(path))
     pages: list[str] = []
     for page_num, page in enumerate(doc, start=1):
         text = page.get_text()
