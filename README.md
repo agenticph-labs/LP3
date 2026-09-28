@@ -8,12 +8,13 @@
 
 A Python-based system that extracts structured information from procurement documents (RFPs, RFQs, tenders). Upload a PDF → AI extracts deadlines, eligibility criteria, deliverables, evaluation criteria, and risks — all as structured, validated data.
 
-> **Portfolio Project 3** — Focused on demonstrating clean architecture, not a polished SaaS product.
+> **Portfolio Project 3 — [AgenticPH Labs](https://agenticph-labs.github.io/portfolio)** — Focused on demonstrating clean architecture, not a polished SaaS product.
 
 ---
 
 ## Table of Contents
 
+- [PH Use Case](#ph-use-case)
 - [How It Works](#how-it-works)
 - [Project Structure](#project-structure)
 - [Quick Start](#quick-start)
@@ -22,6 +23,32 @@ A Python-based system that extracts structured information from procurement docu
 - [Architecture Notes](#architecture-notes)
 - [Contributing](#contributing)
 - [License](#license)
+
+---
+
+## PH Use Case
+
+### Why This Matters for Philippine Procurement
+
+The Philippine government procures over **₱500 billion** annually in goods and services through the Procurement Law (RA 9184). Construction firms, IT vendors, suppliers, and consulting firms regularly bid on RFPs from DPWH, DOST, DICT, LGUs, and GOCCs — but manually analyzing 50+ page tender documents is slow, error-prone, and expensive.
+
+| Stakeholder | How They Use This |
+|-------------|-------------------|
+| **Construction Companies** | Extract deadlines, eligibility docs, and evaluation criteria from DPWH/DOTr infrastructure bids |
+| **IT / Software Vendors** | Parse DICT and LGU RFPs for technical requirements, submission deadlines, and compliance docs |
+| **Consulting Firms** | Analyze consulting RFQs for scope, deliverables, and evaluation weightings |
+| **Government Procurement Offices** | Validate bid submissions against requirements, standardize tender reviews |
+| **SME Suppliers** | Quickly assess whether they qualify to bid without reading 100-page documents |
+
+### Key Benefits for PH Bidders
+
+- **Save hours per RFP** — 50+ page PDFs analyzed in seconds
+- **Never miss a deadline** — all dates extracted and surfaced prominently
+- **Understand evaluation weights** — know what actually gets scored (technical vs. financial)
+- **Identify risks early** — hidden requirements, compliance gotchas, disqualification traps
+- **Compare multiple bids** — structured data lets you compare across opportunities
+
+Extraction works best with text-based PDFs (standard for PH government RFPs). No OCR required for digital documents.
 
 ---
 
@@ -68,6 +95,8 @@ p3-rfp-analyzer/
 ├── .github/workflows/
 │   ├── test.yml              # CI — lint + pytest (matrix: 3.11-3.13)
 │   └── security.yml           # bandit + safety scans
+├── scripts/
+│   └── start.bat             # Windows startup script (venv + install + launch)
 ├── src/
 │   ├── __init__.py
 │   ├── app.py              # Streamlit UI
@@ -123,6 +152,10 @@ streamlit run src/app.py
 
 Open the URL shown in the terminal (default: `http://localhost:8501`). The sample RFP is pre-selected — just click **Analyze Document**.
 
+### Windows Quick Start
+
+Double-click `scripts/start.bat` — it handles venv creation, dependency installation, dashboard launch, and opens your browser automatically. First run will prompt you to configure your API key via the `.env` file.
+
 ---
 
 ## Using Your Own Documents
@@ -172,4 +205,5 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-*Portfolio Project 3 — [AgenticPH Labs](https://agenticph-labs.github.io/portfolio)*
+*Portfolio Project 3 — [AgenticPH Labs](https://agenticph-labs.github.io/portfolio)*  
+*Built by [AgenticPH Labs](https://agenticph-labs.github.io/portfolio) — intelligent tools for Philippine business decisions*
