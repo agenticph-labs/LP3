@@ -2,10 +2,26 @@
 
 [![Status: Live](https://img.shields.io/badge/status-live-22c55e.svg)](https://github.com/agenticph-labs/p3-rfp-analyzer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Tests](https://github.com/agenticph-labs/p3-rfp-analyzer/actions/workflows/test.yml/badge.svg)](https://github.com/agenticph-labs/p3-rfp-analyzer/actions/workflows/test.yml)
+[![Security](https://github.com/agenticph-labs/p3-rfp-analyzer/actions/workflows/security.yml/badge.svg)](https://github.com/agenticph-labs/p3-rfp-analyzer/actions/workflows/security.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 
 A Python-based system that extracts structured information from procurement documents (RFPs, RFQs, tenders). Upload a PDF → AI extracts deadlines, eligibility criteria, deliverables, evaluation criteria, and risks — all as structured, validated data.
 
 > **Portfolio Project 3** — Focused on demonstrating clean architecture, not a polished SaaS product.
+
+---
+
+## Table of Contents
+
+- [How It Works](#how-it-works)
+- [Project Structure](#project-structure)
+- [Quick Start](#quick-start)
+- [Using Your Own Documents](#using-your-own-documents)
+- [Model Support](#model-support)
+- [Architecture Notes](#architecture-notes)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
@@ -49,6 +65,9 @@ A **Streamlit** single-page app:
 
 ```
 p3-rfp-analyzer/
+├── .github/workflows/
+│   ├── test.yml              # CI — lint + pytest (matrix: 3.11-3.13)
+│   └── security.yml           # bandit + safety scans
 ├── src/
 │   ├── __init__.py
 │   ├── app.py              # Streamlit UI
@@ -89,7 +108,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 # Install
-pip install pymupdf streamlit openai pydantic python-dotenv
+pip install -e .
 
 # Configure
 cp .env.example .env
@@ -125,7 +144,7 @@ Default model: **`gpt-4o-mini`** (fast and cost-effective for extraction tasks).
 ## Architecture Notes
 
 | Concern | Implementation | Why |
-|---|---|---|
+|---------|---------------|-----|
 | PDF parsing | PyMuPDF | Fast, pure-Python, no system deps |
 | Structured extraction | OpenAI JSON mode | Reliable schema adherence |
 | Validation | Pydantic v2 | Type-safe, serializable, documented |
@@ -133,6 +152,17 @@ Default model: **`gpt-4o-mini`** (fast and cost-effective for extraction tasks).
 | Prompts | Separate module | Version-controlled, tweakable without touching code |
 
 The design deliberately separates parsing, prompting, and validation so any layer can be swapped (e.g., replace OpenAI with a local model via vLLM, replace Streamlit with FastAPI, add OCR as a preprocessing step).
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feat/my-feature`
+3. Install dev dependencies: `pip install -e ".[dev]"`
+4. Lint with ruff: `ruff check src/ tests/`
+5. Run tests: `pytest tests/ -v --cov=src`
+6. Push and open a pull request
 
 ---
 
