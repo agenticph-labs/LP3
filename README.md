@@ -1,9 +1,9 @@
 # 📄 RFP / RFQ Analyzer
 
-[![Status: Live](https://img.shields.io/badge/status-live-22c55e.svg)](https://github.com/agenticph-labs/p3-rfp-analyzer)
+[![Status: Live](https://img.shields.io/badge/status-live-22c55e.svg)](https://github.com/agenticph-labs/LP3)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Tests](https://github.com/agenticph-labs/p3-rfp-analyzer/actions/workflows/test.yml/badge.svg)](https://github.com/agenticph-labs/p3-rfp-analyzer/actions/workflows/test.yml)
-[![Security](https://github.com/agenticph-labs/p3-rfp-analyzer/actions/workflows/security.yml/badge.svg)](https://github.com/agenticph-labs/p3-rfp-analyzer/actions/workflows/security.yml)
+[![Tests](https://github.com/agenticph-labs/LP3/actions/workflows/test.yml/badge.svg)](https://github.com/agenticph-labs/LP3/actions/workflows/test.yml)
+[![Security](https://github.com/agenticph-labs/LP3/actions/workflows/security.yml/badge.svg)](https://github.com/agenticph-labs/LP3/actions/workflows/security.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 
 A Python-based system that extracts structured information from procurement documents (RFPs, RFQs, tenders). Upload a PDF → AI extracts deadlines, eligibility criteria, deliverables, evaluation criteria, and risks — all as structured, validated data.
@@ -91,7 +91,7 @@ A **Streamlit** single-page app:
 ## Project Structure
 
 ```
-p3-rfp-analyzer/
+LP3/
 ├── .github/workflows/
 │   ├── test.yml              # CI — lint + pytest (matrix: 3.11-3.13)
 │   └── security.yml           # bandit + safety scans
@@ -129,8 +129,8 @@ p3-rfp-analyzer/
 
 ```bash
 # Clone
-git clone https://github.com/agenticph-labs/p3-rfp-analyzer.git
-cd p3-rfp-analyzer
+git clone https://github.com/agenticph-labs/LP3.git
+cd LP3
 
 # Virtual env
 python3 -m venv .venv

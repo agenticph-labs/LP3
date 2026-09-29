@@ -2,7 +2,7 @@
 import pymupdf
 from pathlib import Path
 
-SAMPLE_PATH = Path("/opt/data/portfolio/p3-rfp-analyzer/sample_docs/rfp_sample.pdf")
+SAMPLE_PATH = Path("/opt/data/portfolio/LP3/sample_docs/rfp_sample.pdf")
 SAMPLE_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 doc = pymupdf.open()
