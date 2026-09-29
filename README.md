@@ -1,4 +1,4 @@
-# 📄 RFP / RFQ Analyzer
+# LP3: RFP Document Analyzer
 
 [![Status: Live](https://img.shields.io/badge/status-live-22c55e.svg)](https://github.com/agenticph-labs/LP3)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -205,5 +205,5 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-*Portfolio Project 3 — [AgenticPH Labs](https://agenticph-labs.github.io/portfolio)*  
-*Built by [AgenticPH Labs](https://agenticph-labs.github.io/portfolio) — intelligent tools for Philippine business decisions*
+*Portfolio Project 3 — [AgenticPH](https://agenticph-labs.github.io/portfolio)*  
+*Built by [AgenticPH](https://agenticph-labs.github.io/portfolio) — intelligent tools for Philippine business decisions*
