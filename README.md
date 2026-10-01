@@ -6,9 +6,11 @@
 [![Security](https://github.com/agenticph-labs/LP3/actions/workflows/security.yml/badge.svg)](https://github.com/agenticph-labs/LP3/actions/workflows/security.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 
+🌱 **Built in the open, for the open.** A community tool by Filipino builders — making procurement analysis accessible, understandable, and free for anyone who needs it.
+
 A Python-based system that extracts structured information from procurement documents (RFPs, RFQs, tenders). Upload a PDF → AI extracts deadlines, eligibility criteria, deliverables, evaluation criteria, and risks — all as structured, validated data.
 
-> **Portfolio Project 3 — [AgenticPH Labs](https://agenticph-labs.github.io/portfolio)** — Focused on demonstrating clean architecture, not a polished SaaS product.
+> **Community Project 3 — [AgenticPH Labs](https://agenticph-labs.github.io/portfolio)** — Open-source, built by Filipino builders, for anyone who needs smarter procurement tools.
 
 ---
 
@@ -205,5 +207,5 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-*Portfolio Project 3 — [AgenticPH](https://agenticph-labs.github.io/portfolio)*  
-*Built by [AgenticPH](https://agenticph-labs.github.io/portfolio) — intelligent tools for Philippine business decisions*
+*Built in the open, for the open.*  
+*[AgenticPH Labs](https://agenticph-labs.github.io/portfolio) — Filipino builders crafting practical AI tools for the Philippines.*
