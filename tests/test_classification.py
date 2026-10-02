@@ -13,7 +13,6 @@ Covers all documented use cases from the spec:
 
 from __future__ import annotations
 
-from decimal import Decimal
 from typing import Any
 
 import pytest
@@ -28,7 +27,6 @@ from src.models import (
     RFPParseResult,
     Risk,
 )
-
 
 # ── DocumentType ──────────────────────────────────────────────────────────
 

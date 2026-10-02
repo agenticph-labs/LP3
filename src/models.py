@@ -2,15 +2,12 @@
 
 from __future__ import annotations
 
-from datetime import date
-from decimal import Decimal
-from enum import Enum
-from typing import Optional
+from enum import StrEnum
 
 from pydantic import BaseModel, Field
 
 
-class DocumentType(str, Enum):
+class DocumentType(StrEnum):
     rfp = "RFP"
     rfq = "RFQ"
     rfi = "RFI"
@@ -29,13 +26,13 @@ class Deliverable(BaseModel):
     """A deliverable or work product requested."""
     name: str = Field(description="Short name of the deliverable")
     description: str = Field(description="Full description from the document")
-    due_date: Optional[str] = Field(default=None, description="Due date if specified")
+    due_date: str | None = Field(default=None, description="Due date if specified")
 
 
 class EvaluationCriterion(BaseModel):
     """An evaluation criterion with weight."""
     criterion: str = Field(description="Name / description of the criterion")
-    weight: Optional[float] = Field(
+    weight: float | None = Field(
         default=None,
         description="Weight percentage (e.g. 30 means 30%)",
     )
@@ -60,8 +57,8 @@ class RFPParseResult(BaseModel):
 
     title: str = Field(description="Document title")
     document_type: DocumentType
-    issuing_organization: Optional[str] = None
-    solicitation_number: Optional[str] = None
+    issuing_organization: str | None = None
+    solicitation_number: str | None = None
 
     summary: str = Field(description="One-paragraph summary of the procurement")
 
@@ -74,7 +71,7 @@ class RFPParseResult(BaseModel):
 
     # Evaluation
     evaluation_criteria: list[EvaluationCriterion] = Field(default_factory=list)
-    budget_range: Optional[str] = None
+    budget_range: str | None = None
 
     # Risks & gotchas
     risks: list[Risk] = Field(default_factory=list)

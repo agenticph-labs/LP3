@@ -1,6 +1,7 @@
 """Generate a sample RFP PDF for the analyzer demo."""
-import pymupdf
 from pathlib import Path
+
+import pymupdf
 
 SAMPLE_PATH = Path("/opt/data/portfolio/LP3/sample_docs/rfp_sample.pdf")
 SAMPLE_PATH.parent.mkdir(parents=True, exist_ok=True)
