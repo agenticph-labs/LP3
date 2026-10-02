@@ -31,7 +31,9 @@ where = ["src"]
 
 [tool.ruff]
 target-version = "py311"
-line-length = 100
+line-length = 120
+
+exclude = ["sample_docs"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W", "UP"]
